@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface MyViewController : UIViewController
+{
+    int a;
+    int b;
+    int c;
+}
 
 @end
