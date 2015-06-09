@@ -21,6 +21,7 @@
 		BD78242B1B1C253C003079F1 /* playMusic.png in Resources */ = {isa = PBXBuildFile; fileRef = BD7824281B1C253C003079F1 /* playMusic.png */; };
 		BD78242D1B1C2580003079F1 /* v2_music_add.png in Resources */ = {isa = PBXBuildFile; fileRef = BD78242C1B1C2580003079F1 /* v2_music_add.png */; };
 		BD78242F1B1C265A003079F1 /* 绿袖子.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD78242E1B1C265A003079F1 /* 绿袖子.mp3 */; };
+		BDA069D11B274CEC00B266EE /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA069D01B274CEC00B266EE /* MyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		BD7824281B1C253C003079F1 /* playMusic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playMusic.png; sourceTree = "<group>"; };
 		BD78242C1B1C2580003079F1 /* v2_music_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = v2_music_add.png; sourceTree = "<group>"; };
 		BD78242E1B1C265A003079F1 /* 绿袖子.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "绿袖子.mp3"; sourceTree = "<group>"; };
+		BDA069CF1B274CEC00B266EE /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		BDA069D01B274CEC00B266EE /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,8 @@
 		BD755F0B1B14083600F96BF2 = {
 			isa = PBXGroup;
 			children = (
+				BDA069CF1B274CEC00B266EE /* MyViewController.h */,
+				BDA069D01B274CEC00B266EE /* MyViewController.m */,
 				BD755F431B14174A00F96BF2 /* MusicPick */,
 				BD755F161B14083600F96BF2 /* BSMusicChose */,
 				BD755F301B14083600F96BF2 /* BSMusicChoseTests */,
@@ -265,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDA069D11B274CEC00B266EE /* MyViewController.m in Sources */,
 				BD755F461B1449A300F96BF2 /* BSMusicItemTableViewCell.m in Sources */,
 				BD755F201B14083600F96BF2 /* ViewController.m in Sources */,
 				BD755F1D1B14083600F96BF2 /* AppDelegate.m in Sources */,
