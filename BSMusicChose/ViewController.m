@@ -13,6 +13,9 @@
 #import<AVFoundation/AVFoundation.h>
 
 @interface ViewController ()<BSMusicPickDelegate>
+{
+    AVPlayer* player;
+}
 
 @end
 
@@ -135,6 +138,9 @@
     NSString* mp3FilePath = [[filePath stringByAppendingPathComponent:fileName] stringByAppendingPathExtension:@"mp3"];
     
     NSString* movFilePath = [[filePath stringByAppendingPathComponent:fileName] stringByAppendingPathExtension:@"mov"];
+  
+    
+    NSURL *movFile0 = [NSURL fileURLWithPath:movFilePath];
     
     NSArray *ar = [AVAssetExportSession exportPresetsCompatibleWithAsset: songAsset];
     NSLog(@"%@", ar);
@@ -142,6 +148,12 @@
     AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset: songAsset
                                                                       presetName: AVAssetExportPresetPassthrough];
 
+    // cut movie
+    CMTime start = CMTimeMake(30 * NSEC_PER_SEC, NSEC_PER_SEC);
+    CMTime duration = CMTimeMake(30 * NSEC_PER_MSEC, NSEC_PER_MSEC);
+                                 
+    CMTimeRange range = CMTimeRangeMake(start, duration);
+    exporter.timeRange = range;
     
     NSLog (@"created exporter. supportedFileTypes: %@", exporter.supportedFileTypes);
     
@@ -167,10 +179,21 @@
         switch (exportStatus) {
             case AVAssetExportSessionStatusCompleted: {
                 NSLog (@"AVAssetExportSessionStatusCompleted");
-                BOOL bResult = [self extractQuicktimeMovie:[NSURL URLWithString:movFilePath] toFile: [NSURL URLWithString:mp3FilePath]];
+                NSURL *movFile = [NSURL fileURLWithPath:movFilePath];
+                BOOL bResult = [self extractQuicktimeMovie:movFile  toFile: [NSURL fileURLWithPath:mp3FilePath]];
                 if (bResult)
                 {
-                     NSLog (@"Export mp3 file OK!");
+                    NSLog (@"Export mp3 file OK!");
+                    
+                    if (!player) {
+                        player = [[AVPlayer alloc] initWithURL:[NSURL fileURLWithPath:mp3FilePath]];
+                    } else {
+                        [player pause];
+                        [player replaceCurrentItemWithPlayerItem:[AVPlayerItem playerItemWithURL:[NSURL fileURLWithPath:mp3FilePath]]];
+                    }
+                    
+                    [player play];
+                    
                 }
                 
                 break;
