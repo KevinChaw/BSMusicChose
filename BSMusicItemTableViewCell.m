@@ -154,4 +154,10 @@
     }
 }
 
+-(void) Testing0
+{
+    int a = 0;
+    a++;
+}
+
 @end
