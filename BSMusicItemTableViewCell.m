@@ -32,7 +32,7 @@
 
     if(selected){
         self.backgroundColor =[UIColor grayColor];
-        self.songNameLabel.textColor = [UIColor whiteColor];
+        self.songNameLabel.textColor = [UIColor redColor];
         self.songDurationLabel.textColor = [UIColor whiteColor];
         self.playView.hidden = NO;
         self.playProgressView.hidden = NO;
