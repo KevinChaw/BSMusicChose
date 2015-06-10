@@ -33,6 +33,7 @@
     if(selected){
         self.backgroundColor =[UIColor grayColor];
         self.songNameLabel.textColor = [UIColor whiteColor];
+        self.songNameLabel.textColor = [UIColor redColor];
         self.songDurationLabel.textColor = [UIColor whiteColor];
         self.playView.hidden = NO;
         self.playProgressView.hidden = NO;
@@ -156,8 +157,12 @@
 
 -(void) Testing0
 {
+<<<<<<< HEAD
     int a = 0;
     a++;
+=======
+    NSLog(@"Testing0\n");
+>>>>>>> master
 }
 
 @end
