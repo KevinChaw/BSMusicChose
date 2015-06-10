@@ -22,6 +22,7 @@
 		BD78242D1B1C2580003079F1 /* v2_music_add.png in Resources */ = {isa = PBXBuildFile; fileRef = BD78242C1B1C2580003079F1 /* v2_music_add.png */; };
 		BD78242F1B1C265A003079F1 /* 绿袖子.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD78242E1B1C265A003079F1 /* 绿袖子.mp3 */; };
 		BDA069D11B274CEC00B266EE /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA069D01B274CEC00B266EE /* MyViewController.m */; };
+		BDB974591B28408A00BC1288 /* AViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB974581B28408A00BC1288 /* AViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +60,8 @@
 		BD78242E1B1C265A003079F1 /* 绿袖子.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "绿袖子.mp3"; sourceTree = "<group>"; };
 		BDA069CF1B274CEC00B266EE /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		BDA069D01B274CEC00B266EE /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
-		BDA069D21B274D5300B266EE /* haha.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = haha.h; sourceTree = "<group>"; };
+		BDB974571B28408A00BC1288 /* AViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AViewController.h; sourceTree = "<group>"; };
+		BDB974581B28408A00BC1288 /* AViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,8 @@
 		BD755F0B1B14083600F96BF2 = {
 			isa = PBXGroup;
 			children = (
+				BDB974571B28408A00BC1288 /* AViewController.h */,
+				BDB974581B28408A00BC1288 /* AViewController.m */,
 				BDA069CF1B274CEC00B266EE /* MyViewController.h */,
 				BDA069D01B274CEC00B266EE /* MyViewController.m */,
 				BD755F431B14174A00F96BF2 /* MusicPick */,
@@ -162,7 +166,6 @@
 				BD755F411B14174300F96BF2 /* BSMusicPickViewController.m */,
 				BD755F441B1449A300F96BF2 /* BSMusicItemTableViewCell.h */,
 				BD755F451B1449A300F96BF2 /* BSMusicItemTableViewCell.m */,
-				BDA069D21B274D5300B266EE /* haha.h */,
 			);
 			name = MusicPick;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDA069D11B274CEC00B266EE /* MyViewController.m in Sources */,
+				BDB974591B28408A00BC1288 /* AViewController.m in Sources */,
 				BD755F461B1449A300F96BF2 /* BSMusicItemTableViewCell.m in Sources */,
 				BD755F201B14083600F96BF2 /* ViewController.m in Sources */,
 				BD755F1D1B14083600F96BF2 /* AppDelegate.m in Sources */,
