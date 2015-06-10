@@ -157,12 +157,10 @@
 
 -(void) Testing0
 {
-<<<<<<< HEAD
     int a = 0;
     a++;
-=======
+
     NSLog(@"Testing0\n");
->>>>>>> master
 }
 
 @end
